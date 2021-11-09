@@ -19,3 +19,10 @@ Make sure you have golang installed
 deploy`
 7. To verify deployed project:
 `curl https://go-whiteboard.appspot.com/helloWorld`
+
+## Writing and Compiling .proto files into .go
+1. Create your go file in a directory under `src`
+2. Add the following line after your package declaration:
+`option go_package = "src/{PATH_TO_YOUR_PROTO_PACKAGE}"`
+3. Run the following command one level above `src` (`ls` should print `README.md go.mod go.sum src`)
+`protoc --go_out=. {PATH_TO_YOUR_PROTO_PACKAGE}`

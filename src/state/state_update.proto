@@ -1,0 +1,13 @@
+syntax = "proto3";
+package state;
+
+option go_package = "src/state";
+
+message StateUpdateList {
+    repeated StateUpdate list = 1;
+}
+
+message StateUpdate {
+    string version = 1;
+    int32 data1 = 2; // TODO: Decide on data relevant to StateUpdate
+}

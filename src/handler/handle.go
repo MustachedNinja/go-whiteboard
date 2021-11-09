@@ -2,9 +2,21 @@ package handler
 
 import (
 	"fmt"
+	"log"
 	"net/http"
+	"whiteboard/state"
+
+	"google.golang.org/protobuf/proto"
 )
 
-func HelloWorld(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "Hello World")
+func GetUpdates(w http.ResponseWriter, req *http.Request) {
+	update := state.StateUpdate{
+		Version: "abra",
+		Data1:   1234,
+	}
+	out, err := proto.Marshal(&update)
+	if err != nil {
+		log.Printf("Marshaling error: ", err)
+	}
+	fmt.Fprint(w, out)
 }
