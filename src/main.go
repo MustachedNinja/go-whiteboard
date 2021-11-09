@@ -1,11 +1,18 @@
 package main
 
 import (
+	"log"
 	"net/http"
-	"whiteboard/src/handler"
+	"os"
+	"whiteboard/handler"
 )
 
 func main() {
 	http.HandleFunc("/helloWorld", handler.HelloWorld)
-	http.ListenAndServe(":5000", nil)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+		log.Printf("Defaulting to port %s", port)
+	}
+	http.ListenAndServe(":"+port, nil)
 }
