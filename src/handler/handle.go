@@ -16,7 +16,7 @@ func GetUpdates(w http.ResponseWriter, req *http.Request) {
 	}
 	out, err := proto.Marshal(&update)
 	if err != nil {
-		log.Printf("Marshaling error: ", err)
+		log.Fatalf("Marshaling error: ", err)
 	}
 	fmt.Fprint(w, out)
 }
