@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.27.1
 // 	protoc        v3.18.1
-// source: src/state/state_update.proto
+// source: state/state_update.proto
 
 package state
 
@@ -31,7 +31,7 @@ type StateUpdateList struct {
 func (x *StateUpdateList) Reset() {
 	*x = StateUpdateList{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_src_state_state_update_proto_msgTypes[0]
+		mi := &file_state_state_update_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -44,7 +44,7 @@ func (x *StateUpdateList) String() string {
 func (*StateUpdateList) ProtoMessage() {}
 
 func (x *StateUpdateList) ProtoReflect() protoreflect.Message {
-	mi := &file_src_state_state_update_proto_msgTypes[0]
+	mi := &file_state_state_update_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -57,7 +57,7 @@ func (x *StateUpdateList) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StateUpdateList.ProtoReflect.Descriptor instead.
 func (*StateUpdateList) Descriptor() ([]byte, []int) {
-	return file_src_state_state_update_proto_rawDescGZIP(), []int{0}
+	return file_state_state_update_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *StateUpdateList) GetList() []*StateUpdate {
@@ -79,7 +79,7 @@ type StateUpdate struct {
 func (x *StateUpdate) Reset() {
 	*x = StateUpdate{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_src_state_state_update_proto_msgTypes[1]
+		mi := &file_state_state_update_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -92,7 +92,7 @@ func (x *StateUpdate) String() string {
 func (*StateUpdate) ProtoMessage() {}
 
 func (x *StateUpdate) ProtoReflect() protoreflect.Message {
-	mi := &file_src_state_state_update_proto_msgTypes[1]
+	mi := &file_state_state_update_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -105,7 +105,7 @@ func (x *StateUpdate) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StateUpdate.ProtoReflect.Descriptor instead.
 func (*StateUpdate) Descriptor() ([]byte, []int) {
-	return file_src_state_state_update_proto_rawDescGZIP(), []int{1}
+	return file_state_state_update_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *StateUpdate) GetVersion() string {
@@ -122,41 +122,40 @@ func (x *StateUpdate) GetData1() int32 {
 	return 0
 }
 
-var File_src_state_state_update_proto protoreflect.FileDescriptor
+var File_state_state_update_proto protoreflect.FileDescriptor
 
-var file_src_state_state_update_proto_rawDesc = []byte{
-	0x0a, 0x1c, 0x73, 0x72, 0x63, 0x2f, 0x73, 0x74, 0x61, 0x74, 0x65, 0x2f, 0x73, 0x74, 0x61, 0x74,
-	0x65, 0x5f, 0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x05,
-	0x73, 0x74, 0x61, 0x74, 0x65, 0x22, 0x39, 0x0a, 0x0f, 0x53, 0x74, 0x61, 0x74, 0x65, 0x55, 0x70,
-	0x64, 0x61, 0x74, 0x65, 0x4c, 0x69, 0x73, 0x74, 0x12, 0x26, 0x0a, 0x04, 0x6c, 0x69, 0x73, 0x74,
-	0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x12, 0x2e, 0x73, 0x74, 0x61, 0x74, 0x65, 0x2e, 0x53,
-	0x74, 0x61, 0x74, 0x65, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x04, 0x6c, 0x69, 0x73, 0x74,
-	0x22, 0x3d, 0x0a, 0x0b, 0x53, 0x74, 0x61, 0x74, 0x65, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x12,
-	0x18, 0x0a, 0x07, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x07, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x12, 0x14, 0x0a, 0x05, 0x64, 0x61, 0x74,
-	0x61, 0x31, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x05, 0x64, 0x61, 0x74, 0x61, 0x31, 0x42,
-	0x0b, 0x5a, 0x09, 0x73, 0x72, 0x63, 0x2f, 0x73, 0x74, 0x61, 0x74, 0x65, 0x62, 0x06, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x33,
+var file_state_state_update_proto_rawDesc = []byte{
+	0x0a, 0x18, 0x73, 0x74, 0x61, 0x74, 0x65, 0x2f, 0x73, 0x74, 0x61, 0x74, 0x65, 0x5f, 0x75, 0x70,
+	0x64, 0x61, 0x74, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x05, 0x73, 0x74, 0x61, 0x74,
+	0x65, 0x22, 0x39, 0x0a, 0x0f, 0x53, 0x74, 0x61, 0x74, 0x65, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65,
+	0x4c, 0x69, 0x73, 0x74, 0x12, 0x26, 0x0a, 0x04, 0x6c, 0x69, 0x73, 0x74, 0x18, 0x01, 0x20, 0x03,
+	0x28, 0x0b, 0x32, 0x12, 0x2e, 0x73, 0x74, 0x61, 0x74, 0x65, 0x2e, 0x53, 0x74, 0x61, 0x74, 0x65,
+	0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x04, 0x6c, 0x69, 0x73, 0x74, 0x22, 0x3d, 0x0a, 0x0b,
+	0x53, 0x74, 0x61, 0x74, 0x65, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x76,
+	0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x76, 0x65,
+	0x72, 0x73, 0x69, 0x6f, 0x6e, 0x12, 0x14, 0x0a, 0x05, 0x64, 0x61, 0x74, 0x61, 0x31, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x05, 0x52, 0x05, 0x64, 0x61, 0x74, 0x61, 0x31, 0x42, 0x0b, 0x5a, 0x09, 0x73,
+	0x72, 0x63, 0x2f, 0x73, 0x74, 0x61, 0x74, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_src_state_state_update_proto_rawDescOnce sync.Once
-	file_src_state_state_update_proto_rawDescData = file_src_state_state_update_proto_rawDesc
+	file_state_state_update_proto_rawDescOnce sync.Once
+	file_state_state_update_proto_rawDescData = file_state_state_update_proto_rawDesc
 )
 
-func file_src_state_state_update_proto_rawDescGZIP() []byte {
-	file_src_state_state_update_proto_rawDescOnce.Do(func() {
-		file_src_state_state_update_proto_rawDescData = protoimpl.X.CompressGZIP(file_src_state_state_update_proto_rawDescData)
+func file_state_state_update_proto_rawDescGZIP() []byte {
+	file_state_state_update_proto_rawDescOnce.Do(func() {
+		file_state_state_update_proto_rawDescData = protoimpl.X.CompressGZIP(file_state_state_update_proto_rawDescData)
 	})
-	return file_src_state_state_update_proto_rawDescData
+	return file_state_state_update_proto_rawDescData
 }
 
-var file_src_state_state_update_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_src_state_state_update_proto_goTypes = []interface{}{
+var file_state_state_update_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_state_state_update_proto_goTypes = []interface{}{
 	(*StateUpdateList)(nil), // 0: state.StateUpdateList
 	(*StateUpdate)(nil),     // 1: state.StateUpdate
 }
-var file_src_state_state_update_proto_depIdxs = []int32{
+var file_state_state_update_proto_depIdxs = []int32{
 	1, // 0: state.StateUpdateList.list:type_name -> state.StateUpdate
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
@@ -165,13 +164,13 @@ var file_src_state_state_update_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_src_state_state_update_proto_init() }
-func file_src_state_state_update_proto_init() {
-	if File_src_state_state_update_proto != nil {
+func init() { file_state_state_update_proto_init() }
+func file_state_state_update_proto_init() {
+	if File_state_state_update_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_src_state_state_update_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_state_state_update_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*StateUpdateList); i {
 			case 0:
 				return &v.state
@@ -183,7 +182,7 @@ func file_src_state_state_update_proto_init() {
 				return nil
 			}
 		}
-		file_src_state_state_update_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_state_state_update_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*StateUpdate); i {
 			case 0:
 				return &v.state
@@ -200,18 +199,18 @@ func file_src_state_state_update_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_src_state_state_update_proto_rawDesc,
+			RawDescriptor: file_state_state_update_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_src_state_state_update_proto_goTypes,
-		DependencyIndexes: file_src_state_state_update_proto_depIdxs,
-		MessageInfos:      file_src_state_state_update_proto_msgTypes,
+		GoTypes:           file_state_state_update_proto_goTypes,
+		DependencyIndexes: file_state_state_update_proto_depIdxs,
+		MessageInfos:      file_state_state_update_proto_msgTypes,
 	}.Build()
-	File_src_state_state_update_proto = out.File
-	file_src_state_state_update_proto_rawDesc = nil
-	file_src_state_state_update_proto_goTypes = nil
-	file_src_state_state_update_proto_depIdxs = nil
+	File_state_state_update_proto = out.File
+	file_state_state_update_proto_rawDesc = nil
+	file_state_state_update_proto_goTypes = nil
+	file_state_state_update_proto_depIdxs = nil
 }
