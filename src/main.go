@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/helloWorld", handler.HelloWorld)
+	http.HandleFunc("/getUpdates", handler.GetUpdates)
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
